@@ -11,6 +11,8 @@ Before proceeding, ensure that you have the following installed on your system:
 
 # Installation
 
+>  `NOTE`: If you are on `windows` you should skip this step
+
 To install the `sqlite3` module for Python, you typically don't need to install it separately because it comes bundled with the standard library of Python. However, you may need to install the appropriate `SQLite database engine and development files` for your **operating system**. Here are the general steps to install SQLite:
 
 ### Linux (Ubuntu/Debian) 🐧:
@@ -18,7 +20,7 @@ To install the `sqlite3` module for Python, you typically don't need to install 
 2. Install SQLite by running the following command:
 
 ```bash
-sudo apt install sqlite3 libsqlite3-dev
+sudo apt install sqlite3 libsqlite3-dev python3.11-venv
 ```
 
 # Project Setup
@@ -36,12 +38,7 @@ cd RESTful-API
 ```
 
 ## Create a virtual environment
-First install the debian/ubuntu package
-```bash
-sudo apt install python3.11-venv
-```
 
-And then create the virtual environment
 ```bash
 python -m venv venv
 ```
