@@ -58,7 +58,9 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Start the server
+## Running the Application
+
+To run the application, execute the following command:
 
 ```bash
 python app.py
@@ -126,6 +128,16 @@ The API may return the following status codes in the responses:
 * `404 Not Found`: The requested resource was not found.
 * `500 Internal Server Error`: An error occurred on the server.
 
+# Running Tests
+
+To run the tests, use the following command:
+
+```bash
+pytest
+```
+
+`NOTE: Run in the RESTful-API director`
+
 # Examples
 
 ## Retrieve all users
@@ -134,6 +146,7 @@ The API may return the following status codes in the responses:
 ```bash
 GET /users
 ```
+
 
 Response:
 
