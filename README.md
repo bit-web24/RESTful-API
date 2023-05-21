@@ -36,6 +36,12 @@ cd RESTful-API
 ```
 
 ## Create a virtual environment
+First install the debian/ubuntu package
+```bash
+sudo apt install python3.11-venv
+```
+
+And then create the virtual environment
 ```bash
 python -m venv venv
 ```
