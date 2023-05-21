@@ -1,5 +1,5 @@
 from flask import Flask
-from schema import schema_init
+from src.schema import schema_init
 import sqlite3
 import json
 import os
@@ -32,7 +32,7 @@ def get_users():
         users_list.append(user_dict)
 
     users_json = json.dumps(users_list)
-    return users_json
+    return users_json, 200
 
 # Implement the /users/{id} endpoint to return the details of a specific user:
 @app.route('/users/<int:user_id>', methods=['GET'])
@@ -51,13 +51,13 @@ def get_user(user_id):
                 }
         
         user_json = json.dumps(user_dict)
-        return user_json
+        return user_json, 200
     else:
         msg = {
                 "error": "User not found"
                 }
         err = json.dumps(msg)
-        return err
+        return err, 404
 
 # Implement the /orders endpoint to return a list of all orders:
 @app.route('/orders', methods=['GET'])
@@ -82,7 +82,7 @@ def get_orders():
         orders_list.append(order_dict)
     
     orders_json = json.dumps(orders_list)
-    return orders_json
+    return orders_json, 200
 
 # Implement the /orders/{id} endpoint to return the details of a specific order:
 @app.route('/orders/<int:order_id>', methods=['GET'])
@@ -103,11 +103,11 @@ def get_order(order_id):
                }
 
        order_json = json.dumps(order_dict)
-       return order_json
+       return order_json, 200
    else:
        msg = {
                "error": "Order not found"
                }
        err = json.dumps(msg)
-       return err
+       return err, 404
 

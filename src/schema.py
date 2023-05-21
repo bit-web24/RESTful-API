@@ -1,5 +1,5 @@
 import sqlite3
-from seed import users_data, orders_data
+from src.seed import users_data, orders_data
 import os
 
 def schema_init():
@@ -7,7 +7,6 @@ def schema_init():
     connect = sqlite3.connect(root_dir + '/../db/database.db')
     print('connection to database [OK]')
 
-    # Create a cursor object to execute SQL statements
     cursor = connect.cursor()
 
     # Drop the 'users' and 'orders' tables if they exist
@@ -43,6 +42,5 @@ def schema_init():
     # Execute insert command for all orders_data
     cursor.executemany('''INSERT INTO orders (id, user_id, product_name, quantity, total_price, created_at) VALUES (?, ?, ?, ?, ?, ?)''', orders_data)
     
-    # Commit the changes and close the connection
     connect.commit()
     connect.close()
