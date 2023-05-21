@@ -58,6 +58,12 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+## Start the server
+
+```bash
+python app.py
+```
+
 ## Base URL
 
 The base URL for all API endpoints is: http://127.0.0.1:5000
