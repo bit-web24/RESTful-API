@@ -12,6 +12,17 @@ schema_init()
 root_dir = os.path.abspath(os.path.dirname(__file__))
 db_path = root_dir + '/../db/database.db'
 
+# Implement the / endpoint to display all available paths and their responses
+@app.route('/', methods=['GET'])
+def get_paths():
+    paths = {
+        '/users': 'GET - Get a list of all users',
+        '/users/{id}': 'GET - Get the details of a specific user',
+        '/orders': 'GET - Get a list of all orders',
+        '/orders/{id}': 'GET - Get the details of a specific order'
+    }
+    return json.dumps(paths), 200
+
 # Implement the /users endpoint to return a list of all users:
 @app.route('/users', methods=['GET'])
 def get_users():
