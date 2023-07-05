@@ -2,6 +2,14 @@
 
 This is a RESTful API that allows you to interact with the application and perform various actions. The API provides endpoints to retrieve **user data** and **order data**.
 
+## Deployment on PythonAnywhere
+
+The Flask project has been successfully deployed on PythonAnywhere. You can access the deployed API using the following URL:
+
+- **API Base URL**: [https://ke64rn47h.pythonanywhere.com/](https://ke64rn47h.pythonanywhere.com/)
+
+Please note that the application URL may be subject to change based on your PythonAnywhere account settings.
+
 # Prerequisites
 
 Before proceeding, ensure that you have the following installed on your system:
